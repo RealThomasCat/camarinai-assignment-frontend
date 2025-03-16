@@ -25,31 +25,33 @@ export default function Login() {
   };
 
   return (
-    <div className="flex flex-col items-center mt-10">
-      <h2 className="text-2xl mb-4">Login</h2>
-      <form onSubmit={handleLogin} className="flex flex-col gap-2">
-        <input
-          type="text"
-          placeholder="Username"
-          className="border p-2"
-          onChange={(e) => setUsername(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          className="border p-2"
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button type="submit" className="bg-blue-500 text-white p-2 rounded">
-          Login
-        </button>
-      </form>
-      <p className="mt-4">
-        Don't have an account?{" "}
-        <Link to="/register" className="text-blue-500">
-          Register here
-        </Link>
-      </p>
+    <div className="h-screen flex flex-col items-center justify-center">
+      <div className="w-lg flex flex-col items-center justify-center gap-8">
+        <h2 className="text-2xl">Login</h2>
+        <form onSubmit={handleLogin} className="w-full flex flex-col gap-4">
+          <input
+            type="text"
+            placeholder="Username"
+            className="border p-2 rounded"
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            className="border p-2 rounded"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button type="submit" className="bg-blue-500 text-white p-2 rounded">
+            Login
+          </button>
+        </form>
+        <p className="">
+          Don't have an account?{" "}
+          <Link to="/register" className="text-blue-500">
+            Register here
+          </Link>
+        </p>
+      </div>
     </div>
   );
 }

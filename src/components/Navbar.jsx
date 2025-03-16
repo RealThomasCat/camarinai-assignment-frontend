@@ -16,11 +16,16 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="p-4 bg-blue-500 text-white flex justify-between">
+    <nav className="p-4 bg-blue-500 text-white flex justify-between w-full">
       <Link to="/" className="text-xl font-bold">
-        Comment System
+        Home
       </Link>
-      <div>
+      <div className="flex items-center justify-center gap-8">
+        {user && (
+          <Link to="/notifications" className="mr-4">
+            Notifications
+          </Link>
+        )}
         {user ? (
           <button
             onClick={handleLogout}

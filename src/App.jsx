@@ -4,6 +4,7 @@ import { AuthLayout } from "./layouts/AuthLayout";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
 import Login from "./pages/login";
+import Notifications from "./pages/Notifications";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
           {/* Protected route: Only accessible when logged in */}
           <Route element={<AuthLayout requiresAuth={true} />}>
             <Route path="/" element={<Home />} />
+            <Route path="/notifications" element={<Notifications />} />
           </Route>
 
           {/* Public routes: Only accessible when logged out */}
