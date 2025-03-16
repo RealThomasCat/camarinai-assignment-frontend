@@ -39,7 +39,7 @@ export default function Post({ post, setPosts }) {
         alt="Post"
         className="w-full aspect-square object-cover rounded"
       />
-      <p className="mt-3 px-1 font-medium text-lg text-neutral-900 ">
+      <p className="mt-3 px-1 font-medium sm:text-lg text-neutral-900 ">
         {post.caption}
       </p>
 
@@ -49,7 +49,7 @@ export default function Post({ post, setPosts }) {
           post.comments.map((comment) => (
             <p
               key={comment._id}
-              className={`text-sm ${
+              className={`text-xs sm:text-sm ${
                 comment.isFlagged ? "text-red-500" : "text-neutral-700"
               }`}
             >
@@ -63,7 +63,9 @@ export default function Post({ post, setPosts }) {
             </p>
           ))
         ) : (
-          <p className="text-sm text-neutral-500">No comments yet.</p>
+          <p className="text-xs sm:text-base text-neutral-500">
+            No comments yet.
+          </p>
         )}
       </div>
 
@@ -75,11 +77,11 @@ export default function Post({ post, setPosts }) {
             placeholder="Add a comment..."
             value={commentText}
             onChange={(e) => setCommentText(e.target.value)}
-            className="p-2 w-full rounded-l bg-neutral-200 text-black placeholder:text-neutral-500 focus:outline-none"
+            className="py-2 px-2 w-full rounded-l bg-neutral-200 text-black placeholder:text-neutral-500 focus:outline-none text-xs sm:text-base"
           />
           <button
             onClick={handleAddComment}
-            className="bg-blue-500 text-white px-3 py-2 rounded-r"
+            className="bg-blue-500 text-white px-2 sm:px-3 py-2 rounded-r text-xs sm:text-sm"
           >
             Comment
           </button>

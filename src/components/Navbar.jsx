@@ -16,14 +16,14 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="py-4 px-8 bg-neutral-100 text-blue-500 flex justify-between w-full">
-      <Link to="/" className="text-xl font-bold">
+    <nav className="py-3 sm:py-4 px-4 sm:px-8 bg-neutral-100 text-blue-500 flex justify-between w-full">
+      <Link to="/" className="text-base sm:text-xl font-bold">
         Home
       </Link>
       <div className="flex items-center justify-center gap-6">
         {user && (
           <Link to="/notifications">
-            <button className="bg-blue-500 text-gray-100 font-medium px-3 py-1 rounded w-32">
+            <button className="bg-blue-500 text-gray-100 font-medium px-2 sm:px-3 py-1 rounded sm:w-32 text-xs sm:text-base">
               Notifications
             </button>
           </Link>
@@ -31,7 +31,7 @@ export default function Navbar() {
         {user ? (
           <button
             onClick={handleLogout}
-            className="bg-blue-500 text-gray-100 font-medium px-3 py-1 rounded w-32"
+            className="bg-blue-500 text-gray-100 font-medium px-2 sm:px-3 py-1 rounded sm:w-32 text-xs sm:text-base"
           >
             Logout
           </button>

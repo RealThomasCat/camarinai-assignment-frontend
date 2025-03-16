@@ -25,9 +25,11 @@ export default function Login() {
   };
 
   return (
-    <div className="h-screen flex flex-col items-center justify-center">
-      <div className="w-lg flex flex-col items-center justify-center gap-8 bg-neutral-100 p-6 rounded">
-        <h2 className="text-2xl font-medium text-neutral-800">Login</h2>
+    <div className="h-screen flex flex-col items-center justify-center px-4">
+      <div className="w-full max-w-md flex flex-col items-center justify-center gap-8 bg-neutral-100 p-6 rounded">
+        <h2 className="text-xl sm:text-2xl font-medium text-neutral-800">
+          Login
+        </h2>
         <form onSubmit={handleLogin} className="w-full flex flex-col gap-4">
           <input
             type="text"
@@ -45,7 +47,7 @@ export default function Login() {
             Login
           </button>
         </form>
-        <p className="text-neutral-800">
+        <p className="text-neutral-800 text-center text-sm sm:text-base">
           Don't have an account?{" "}
           <Link to="/register" className="text-blue-500">
             Register here

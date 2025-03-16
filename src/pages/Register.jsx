@@ -22,9 +22,11 @@ export default function Register() {
   };
 
   return (
-    <div className="h-screen flex flex-col items-center justify-center">
-      <div className="w-lg flex flex-col items-center justify-center gap-8 bg-neutral-100 p-6 rounded">
-        <h2 className="text-2xl font-medium text-neutral-800">Register</h2>
+    <div className="h-screen flex flex-col items-center justify-center px-4">
+      <div className="w-full max-w-lg flex flex-col items-center justify-center gap-8 bg-neutral-100 p-6 rounded">
+        <h2 className="text-xl sm:text-2xl font-medium text-neutral-800">
+          Register
+        </h2>
         <form onSubmit={handleRegister} className="w-full flex flex-col gap-4">
           <input
             type="text"
@@ -42,7 +44,7 @@ export default function Register() {
             Register
           </button>
         </form>
-        <p className="text-neutral-800">
+        <p className="text-neutral-800 text-sm sm:text-base text-center">
           Already have an account?{" "}
           <Link to="/login" className="text-blue-500">
             Login here
