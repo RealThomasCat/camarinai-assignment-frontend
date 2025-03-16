@@ -23,26 +23,26 @@ export default function Register() {
 
   return (
     <div className="h-screen flex flex-col items-center justify-center">
-      <div className="w-lg flex flex-col items-center justify-center gap-8">
-        <h2 className="text-2xl">Register</h2>
+      <div className="w-lg flex flex-col items-center justify-center gap-8 bg-neutral-100 p-6 rounded">
+        <h2 className="text-2xl font-medium text-neutral-800">Register</h2>
         <form onSubmit={handleRegister} className="w-full flex flex-col gap-4">
           <input
             type="text"
             placeholder="Username"
-            className="border p-2 rounded"
+            className="p-2 w-full rounded-l bg-neutral-200 text-black placeholder:text-neutral-500 focus:outline-none"
             onChange={(e) => setUsername(e.target.value)}
           />
           <input
             type="password"
             placeholder="Password"
-            className="border p-2 rounded"
+            className="p-2 w-full rounded-l bg-neutral-200 text-black placeholder:text-neutral-500 focus:outline-none"
             onChange={(e) => setPassword(e.target.value)}
           />
           <button type="submit" className="bg-blue-500 text-white p-2 rounded">
             Register
           </button>
         </form>
-        <p className="">
+        <p className="text-neutral-800">
           Already have an account?{" "}
           <Link to="/login" className="text-blue-500">
             Login here

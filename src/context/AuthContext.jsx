@@ -1,7 +1,7 @@
 import { createContext, useState, useEffect } from "react";
 import axios from "axios";
 
-// Create context
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 export const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
@@ -11,12 +11,9 @@ export function AuthProvider({ children }) {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await axios.get(
-          `${import.meta.env.VITE_BACKEND_URL}/api/auth/user`,
-          {
-            withCredentials: true,
-          }
-        );
+        const res = await axios.get(`${BACKEND_URL}/api/auth/user`, {
+          withCredentials: true,
+        });
         setUser(res.data);
       } catch (error) {
         setUser(null);
