@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center">
       <Navbar />
-      <div className="w-full max-w-lg mt-6">
+      <div className="w-full max-w-lg mt-6 px-4 sm:px-0">
         {posts.map((post) => (
           <Post key={post._id} post={post} setPosts={setPosts} />
         ))}
