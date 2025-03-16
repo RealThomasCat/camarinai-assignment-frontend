@@ -11,7 +11,7 @@ export default function Post({ post, setPosts }) {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/comments",
+        `${import.meta.env.VITE_BACKEND_URL}/api/comments`,
         { postId: post._id, text: commentText },
         { withCredentials: true }
       );

@@ -9,7 +9,7 @@ export default function Notifications() {
     const fetchFlaggedComments = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:5000/api/auth/notifications",
+          `${import.meta.env.VITE_BACKEND_URL}/api/auth/notifications`,
           { withCredentials: true }
         );
         setFlaggedComments(res.data.flaggedComments);
@@ -24,7 +24,9 @@ export default function Notifications() {
     <div>
       <Navbar />
       <div className="p-4 max-w-md mx-auto">
-        <h1 className="text-2xl mb-4">Flagged Comments (Will be reviewed further in 24 hours and be removed</h1>
+        <h1 className="text-2xl mb-4">
+          Flagged Comments (Will be reviewed further in 24 hours and be removed
+        </h1>
         {flaggedComments.length > 0 ? (
           flaggedComments.map((comment, index) => (
             <div key={index} className="bg-red-100 p-3 mb-3 rounded">

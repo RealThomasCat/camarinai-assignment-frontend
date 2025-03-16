@@ -11,7 +11,7 @@ export default function Register() {
     e.preventDefault();
     try {
       await axios.post(
-        "http://localhost:5000/api/auth/register",
+        `${import.meta.env.VITE_BACKEND_URL}/api/auth/register`,
         { username, password },
         { withCredentials: true }
       );

@@ -11,9 +11,12 @@ export function AuthProvider({ children }) {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/auth/user", {
-          withCredentials: true,
-        });
+        const res = await axios.get(
+          `${import.meta.env.VITE_BACKEND_URL}/api/auth/user`,
+          {
+            withCredentials: true,
+          }
+        );
         setUser(res.data);
       } catch (error) {
         setUser(null);
