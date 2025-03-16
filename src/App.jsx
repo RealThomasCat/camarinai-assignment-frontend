@@ -3,7 +3,7 @@ import { AuthProvider } from "./context/AuthContext";
 import { AuthLayout } from "./layouts/AuthLayout";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
-import Login from "./pages/login";
+import Login from "./pages/Login";
 import Notifications from "./pages/Notifications";
 
 export default function App() {
